@@ -13,12 +13,13 @@ Team members:
 Implementation Details:  
 
 1. 	Work Unit:  
-  The application follows a Client-Server architecture and is implemented using GenServer.  
-  Server:
+  The application follows a Client-Server architecture and is implemented using GenServer. 
+  
+  Server:  
   - The Server on starting up creates its own Node and Spawns 8 Work units, since its running on a 8 Core machine.
   - The Server connects with one or more clients, and sends the number of zeros for mining bitcoins to the clients.
-
-  Client:
+  
+  Client:  
   - The Client connects to the Server 
   - On receiving the number of zeros to mine, the Client spawns 8 Work units on its own machine and generates as many bitcoins as possible. 
    
