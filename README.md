@@ -1,8 +1,6 @@
 # Bitcoin-Miner
-Implemented Bitcoin Miner using Actor Model in Elixir
 
-READ ME file for Distributed Operating Systems - Project 1  
-Description: This is an distributed Bitcoin mining system based on Actor Model in Elixir/Erlang.  
+Description: This is an distributed Bitcoin mining system based on Actor Model in Elixir.  
 Date: September 18th, 2017  
 
 Team members:  
