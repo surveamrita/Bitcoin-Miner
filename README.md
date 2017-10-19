@@ -12,21 +12,21 @@ Team members:
 
 Implementation Details:  
 
-	1. 	Work Unit:  
+1. 	Work Unit:  
   The application follows a Client-Server architecture and is implemented using GenServer.  
-  1. Server:
+  Server:
   - The Server on starting up creates its own Node and Spawns 8 Work units, since its running on a 8 Core machine.
   - The Server connects with one or more clients, and sends the number of zeros for mining bitcoins to the clients.
 
-  2. Client:
+  Client:
   - The Client connects to the Server 
   - On receiving the number of zeros to mine, the Client spawns 8 Work units on its own machine and generates as many bitcoins as possible. 
    
    Since both Server and Client machines have 8 cores each, the number of work units spawned is 8.
 
-   Inside the Work Unit we are generating a 5 character string using a random string generator which is further hashed with SHA256. This generates a fixed length string of 32 digits. The total number of permutations for an alphanumeric string of 32 characters is (32)^36.
+   Inside the Work Unit we are generating a 5 character string using a random string generator which is further hashed with SHA256. This   generates a fixed length string of 32 digits. The total number of permutations for an alphanumeric string of 32 characters is (32)^36.
 
-	2.	The result of running your program for
+2.	The result of running your program for
 The random string is prefixed by gator_id = "asurve;" and the no of zeros(k) is given as 4.
 
 ./project1 4  
